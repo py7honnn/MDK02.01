@@ -1,0 +1,73 @@
+using System;
+
+
+namespace Dz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //one();
+            //two();
+            //three();
+
+
+        }
+
+        static void one()
+        {
+            Console.WriteLine("Ваше имя?");
+            string name = Console.ReadLine();
+            Console.WriteLine("Ваша Фамелия ?");
+            string fam = Console.ReadLine();
+            Console.WriteLine("Возраст?");
+            string age = Console.ReadLine();
+            Console.WriteLine("Ваш рост?");
+            string rost = Console.ReadLine();
+            Console.WriteLine("Ваш вес?");
+            string str = Console.ReadLine();
+            Console.WriteLine("Ваше имя:{0:D} Фамелия:{1:D} Возраст:{2:D} Вес:{3:D}", name, fam, age, rost, str);
+
+        }
+
+        static void two()
+        {
+            Console.WriteLine("Ваш рост:");
+            double h = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ваша масса:");
+            double m = double.Parse(Console.ReadLine());
+            double I = m / (h * h);
+            Console.WriteLine("ИМТ: "+I);
+
+        }
+
+        static void three()
+        {
+            Console.WriteLine("X1:");
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine("Y1:");
+            double y = double.Parse(Console.ReadLine());
+            Console.WriteLine("X2:");
+            double x2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Y2:");
+            double y2 = double.Parse(Console.ReadLine());
+            double r = Math.Sqrt(Math.Pow(x2 - x, 2) + Math.Pow(y2 - y, 2));
+            Console.WriteLine("R = "+r);
+
+
+        }
+
+        static void foo()
+        {
+            float a, b;
+            a = 17.03f;
+            b = 41.03f;
+
+           a = b
+        }
+
+
+
+
+    }
+}

@@ -1,0 +1,128 @@
+using System;
+
+
+namespace Dz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Напишите какую программу хотите проверить:");
+            string str = Console.ReadLine();
+            switch (str)
+            {
+                case "1":
+                    Sumator();
+                    break;
+                case "2":
+                    two();
+                    break;
+                case "3":
+                    hree();
+                    break;
+                case "4":
+                    Console.WriteLine("Я не успел");
+                    break;
+                case "5":
+                    five();
+                    break;
+                case "6":
+                    six();
+                    break;
+                default:
+                    Console.WriteLine("Вы нечего нечего не ввели");
+                    break;
+            }
+        }
+
+        public static void Sumator()
+        {
+            double x;​
+            double y;​
+            Console.WriteLine("Введите первое число: ");
+            string str = Console.ReadLine();
+            x = Convert.ToDouble(str);
+            Console.WriteLine("Введите второе число: ");
+            y = Convert.ToDouble(Console.ReadLine());
+            double z = x + y;
+            Console.WriteLine(x + "x" + "+" + y + "y" + "=" + z);
+        }
+
+        public static void two()
+        {
+            double a = 1;​
+            double b = 1;​
+            double c = 1;​
+            double x;​
+            Console.WriteLine("Введите значение X");
+            string s = Console.ReadLine();
+            x = Convert.ToDouble(s);
+            double f = a * Math.Pow(x, 2) + b * x + c;
+            Console.WriteLine("{0}*x^2+{1}*x+{2},приx={3},f={4}", a, b, c, x, f);
+
+        }
+
+        public static void hree()
+        {
+            ​int a = 10;
+            int b = 20;
+            int t = a;
+            a = b;
+            b = t;
+        }
+
+        public static void foo()
+        {
+            static bool odd(int n)
+            {
+                return n % 2 == 0;
+            }
+
+            int value = 100500;
+            Console.WriteLine(odd(value));
+        }
+
+        public static void five()
+        {
+            void Print(string msg, int x, int y)
+            {
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(msg);
+            }
+            static void Print(string msg, ConsoleColor faregroundcolor)
+            {
+                Console.ForegroundColor = faregroundcolor;
+                Console.WriteLine(msg);
+            }
+            Print("Привет!\n", 10, 10);
+            Print("Привет еще раз!\n", ConsoleColor.Red);
+            Console.ReadLine();
+        }
+
+        public static void six()
+        {
+            static bool IsTriangle(double a, double b,double c){
+                return a + b > c && a + c > b && c + b > a;
+            }
+
+            static double S(double a, double b, double c)
+            {
+                double p = (a + b + c) / 2;
+                return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            }
+
+            Console.WriteLine("Введите a:");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите b:");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите c:");
+            double c = double.Parse(Console.ReadLine());
+            Console.WriteLine("Может существовать треугольник стакими сторонами:" + IsTriangle(a,b,c));
+            Console.WriteLine("Площадь треуголтника:"+S(a,b,c));
+            Console.ReadLine();
+
+
+        }
+
+    }
+}
